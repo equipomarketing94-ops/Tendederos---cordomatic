@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tendederos — Soluciones para secar tu ropa en cualquier espacio</title>
+<meta name="description" content="Tendederos abatibles, colgantes, plegables, estáticos y cordomáticos. Fabricados en Colombia. Envío a todo el país.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="row container">
+    <div class="logo">tende<span>deros</span></div>
+    <nav style="display:flex;gap:24px;align-items:center">
+      <a href="#catalogo" style="color:#fff;font-weight:600;font-size:0.9rem;text-decoration:none;opacity:0.85">Catálogo</a>
+      <a href="#contacto" style="color:#fff;font-weight:600;font-size:0.9rem;text-decoration:none;opacity:0.85">Contacto</a>
+      <button class="cart-btn" id="cart-open" aria-label="Abrir carrito">
+        🧺
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">📦 Fabricados en Colombia · Envío a todo el país</span>
+      <h1>El tendedero <span>perfecto</span> para tu espacio</h1>
+      <p class="lead">Balcones, baños, patios, techos altos o espacios amplios — tenemos el modelo exacto para cada rincón de tu hogar.</p>
+      <div class="hero-cta">
+        <a href="#catalogo" class="btn btn-primary">Ver catálogo</a>
+        <a href="#" id="wa-hero" class="btn btn-outline" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">🧺</div>
+  </div>
+</section>
+
+<!-- ===== BADGES ===== -->
+<div class="badges">
+  <div class="container badges-row">
+    <span class="badge-item">✅ Aluminio y acero de calidad</span>
+    <span class="badge-item">🛡️ Garantía hasta 3 años</span>
+    <span class="badge-item">🔧 Servicio de mantenimiento</span>
+    <span class="badge-item">🔁 Venta de repuestos</span>
+    <span class="badge-item">🌧️ Resistente a la intemperie</span>
+  </div>
+</div>
+
+<!-- ===== CATÁLOGO ===== -->
+<section class="section" id="catalogo">
+  <div class="container">
+    <div class="section-head">
+      <h2>Nuestros tendederos</h2>
+      <p>5 tipos de tendedero, múltiples medidas. Filtra por tipo o mira todo el catálogo.</p>
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="pared">Pared</button>
+      <button class="filter-btn" data-filter="techo">Techo</button>
+      <button class="filter-btn" data-filter="exterior">Exterior</button>
+    </div>
+
+    <div class="grid-products" id="product-grid"></div>
+  </div>
+</section>
+
+<!-- ===== CÓMO FUNCIONA ===== -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>¿Cómo hacer tu pedido?</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">01</div>
+        <h3>Elige tu modelo y medida</h3>
+        <p>Selecciona el tendedero que se adapta a tu espacio y el tamaño que necesitas.</p>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h3>Paga de forma segura</h3>
+        <p>Acepta tarjetas, PSE y Nequi. Tu pago está protegido por Wompi de Bancolombia.</p>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <h3>Lo preparamos y enviamos</h3>
+        <p>Alistamos tu pedido y lo enviamos a cualquier parte de Colombia.</p>
+      </div>
+      <div class="step">
+        <div class="num">04</div>
+        <h3>Instalación sencilla</h3>
+        <p>Cada tendedero viene con instrucciones. Si necesitas ayuda, te acompañamos por WhatsApp.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACTO ===== -->
+<section class="section" id="contacto">
+  <div class="container contact-wrap">
+    <div>
+      <div class="section-head">
+        <h2>¿Tienes preguntas?</h2>
+        <p>Escríbenos y te respondemos el mismo día.</p>
+      </div>
+      <form id="contact-form">
+        <div class="field">
+          <label for="name">Nombre completo</label>
+          <input id="name" name="name" type="text" placeholder="Tu nombre" required>
+        </div>
+        <div class="field">
+          <label for="email">Correo electrónico</label>
+          <input id="email" name="email" type="email" placeholder="tucorreo@email.com" required>
+        </div>
+        <div class="field">
+          <label for="phone">Teléfono / WhatsApp</label>
+          <input id="phone" name="phone" type="tel" placeholder="300 000 0000">
+        </div>
+        <div class="field">
+          <label for="message">¿En qué te podemos ayudar?</label>
+          <textarea id="message" name="message" placeholder="Cuéntanos qué espacio tienes, medidas aproximadas, o cualquier duda..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-blue">Enviar mensaje</button>
+        <p class="form-status" id="form-status"></p>
+      </form>
+    </div>
+
+    <div class="contact-side">
+      <h3>Respuesta más rápida por WhatsApp</h3>
+      <p>Si tienes una duda urgente sobre medidas, instalación o envío, escríbenos directo y te respondemos al instante.</p>
+      <a href="#" id="wa-contact" class="btn btn-whatsapp btn-block" target="_blank" rel="noopener" style="margin-top:20px">
+        💬 Abrir WhatsApp
+      </a>
+      <div class="contact-info-item">
+        📦 Envíos a todo Colombia
+      </div>
+      <div class="contact-info-item">
+        🔧 Instalación y mantenimiento disponible
+      </div>
+      <div class="contact-info-item">
+        🛡️ Garantía y repuestos originales
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container row">
+    <div class="logo">tende<span>deros</span></div>
+    <p>© 2026 · Fabricados en Colombia · Todos los derechos reservados</p>
+  </div>
+</footer>
+
+<!-- ===== WhatsApp flotante ===== -->
+<a href="#" id="wa-float" class="wa-float" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.07-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18a7.9 7.9 0 0 1-4.24-1.23l-.3-.19-3.01.79.8-2.94-.2-.3A7.93 7.93 0 1 1 12 20zm4.4-5.9c-.24-.12-1.43-.7-1.65-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.52.06-.24-.12-1-.37-1.9-1.17-.7-.62-1.18-1.39-1.32-1.63-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.1.16 1.52.1.46-.07 1.43-.58 1.63-1.15.2-.57.2-1.05.14-1.15-.06-.1-.22-.16-.46-.28z"/>
+  </svg>
+</a>
+
+<!-- ===== CARRITO ===== -->
+<div class="overlay" id="overlay"></div>
+<aside class="cart-drawer" id="cart-drawer" aria-label="Carrito de compra">
+  <div class="cart-head">
+    <h3>🧺 Tu carrito</h3>
+    <button class="cart-close" id="cart-close" aria-label="Cerrar">×</button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-foot">
+    <div class="cart-total-row">
+      <span>Total</span>
+      <span id="cart-total">$0 COP</span>
+    </div>
+    <button class="btn btn-primary btn-block" id="checkout-btn">Pagar con Wompi</button>
+  </div>
+</aside>
+
+<script src="script.js"></script>
+</body>
+</html>
